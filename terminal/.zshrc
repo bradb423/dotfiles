@@ -70,7 +70,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-syntax-highlighting zsh-autosuggestions universalarchive)
+plugins=( zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,20 +91,30 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-alias ls='ls -aFh --color=auto'
-alias sl='ls -aFh --color=auto'
-alias ll='ls -alFh --color=auto'
-alias aptup='sudo apt update && sudo apt upgrade'
-alias untar='tar -zxvf'
-alias sha='shasum -a 256'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias c='clear'
-alias vs='code . && exit'
-alias mkdir='mkdir -pv'
-alias mv='mv -i'
-alias cp='cp -i'
-alias rm='rm -i'
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
 
+
+alias sl="ls"
+alias ls="ls -a --color=auto"
+alias ll="ls -alFh --color=auto"
+alias ..="cd .."
+alias ...="cd ../.."
+alias c="clear"
+alias mkdir="mkdir -pv"
+alias mv="mv -i"
+alias cp="cp -i"
+alias rm="rm -i"
+alias sha="shasum -a 256"
+alias vs="code . && exit"
+alias neofetch="clear && neofetch"
+alias pacup="sudo pacman -Syu"
+alias paclean="sudo pacman -Qtdq | sudo pacman -Rns -"
+alias nnao="nano"
+
+# Starship
 eval "$(starship init zsh)"
 
