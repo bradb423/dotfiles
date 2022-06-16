@@ -5,3 +5,4 @@
 
 ln -sf terminal/starship.toml ~/.config/starship.toml
 ls -sf terminal/.zshrc ~/.zshrc
+ln -sf dev/.gitconfig ~/.gitconfig
