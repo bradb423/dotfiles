@@ -1,0 +1,6 @@
+[user]
+	name = Bradley Burns
+	email = bradleyburns00@gmail.com
+	signingkey = 5BC897D9B641C86A
+[commit]
+	gpgsign = true
